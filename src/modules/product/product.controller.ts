@@ -11,10 +11,10 @@ export class ProductController {
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
   async createProduct(@Body() createProductDto: CreateProductDto) {
-    return this.productService.createProduct(createProductDto.translations);
+    return this.productService.createProduct(createProductDto.product);
   }
 
-  @Get()
+  @Get('search')
   @UsePipes(new ValidationPipe({ transform: true, whitelist: true }))
   async searchProducts(@Query() searchProductsDto: SearchProductsDto) {
     return this.productService.searchProducts(searchProductsDto);

@@ -26,5 +26,5 @@ export class CreateProductDto {
   @ArrayMinSize(1)
   @ValidateNested({ each: true })
   @Type(() => TranslationDto)
-  translations: TranslationDto[];
+  product: TranslationDto[];
 }
