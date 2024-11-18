@@ -32,7 +32,7 @@
    - **Request Body**:
      ```json
      {
-       "translations": [
+       "product": [
          { "language": "en", "name": "Product Name", "description": "Product Description" },
          { "language": "th", "name": "ชื่อสินค้า", "description": "รายละเอียดสินค้า" }
        ]
